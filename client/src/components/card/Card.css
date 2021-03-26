@@ -1,0 +1,16 @@
+.card {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(212,180,201,1) 0%, rgba(0,168,231,1) 40%, rgba(2,97,151,1) 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 rgba(238, 208, 127, 0.6);
+}
+@media screen and (min-width: 48em) {
+    .card {
+        width: 300px;
+        height: 300px;
+    }
+}

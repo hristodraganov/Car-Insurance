@@ -1,0 +1,61 @@
+.admin-section {
+    background: linear-gradient(to bottom, rgba(212,180,201,1) 0%, rgba(0,168,231,1) 40%, rgba(2,97,151,1) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+.admin-panel {
+    justify-content: center;
+    margin-top: 5rem;
+    display: flex;
+    margin-bottom: 1rem;
+    height: 300px;
+    flex-direction: row;
+    text-align: left;
+    border: 1px solid rgba(212,180,201,.7);
+}
+.admin-panel .inputs{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    justify-content: space-evenly;
+}
+
+.admin-panel .input-labels {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.admin-panel .input-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: .5rem;
+}
+.error-section {
+    background: linear-gradient(to bottom, rgba(212,180,201,1) 0%, rgba(0,168,231,1) 40%, rgba(2,97,151,1) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+

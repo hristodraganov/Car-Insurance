@@ -1,0 +1,7 @@
+.ci-type-section {
+    background: linear-gradient(0deg, rgba(212,180,201,1) 0%, rgba(0,168,231,1) 40%, rgba(2,97,151,1) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;   
+    overflow-y: auto;
+}
