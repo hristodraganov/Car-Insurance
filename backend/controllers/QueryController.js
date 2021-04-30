@@ -20,12 +20,15 @@ exports.find_by_IDN_post = (req, res) => {
             if (err) {
                 res.status(500).send(err)
             }
-            responseData.push(data)
+            if (data) {
+                responseData.push(data)
+            }
             res.status(200).send(responseData)
         })
 }
 
 exports.find_by_name_post = (req, res) => {
+    let responseData = []
     accidentDetail.find({
         insuranceCompany: req.body.insuranceCompany,
         $or: [
@@ -37,11 +40,15 @@ exports.find_by_name_post = (req, res) => {
             if (err) {
                 res.status(500).send(err)
             }
-            res.status(200).send(data)
+            if (data) {
+                responseData.push(data)
+            }
+            res.status(200).send(responseData)
         })
 }
 
 exports.find_by_date_post = (req, res) => {
+    let responseData = []
     accidentDetail.find({
         insuranceCompany: req.body.insuranceCompany,
         firstReg: req.body.firstReg
@@ -50,11 +57,15 @@ exports.find_by_date_post = (req, res) => {
             if (err) {
                 res.status(500).send(err)
             }
-            res.status(200).send(data)
+            if (data) {
+                responseData.push(data)
+            }
+            res.status(200).send(responseData)
         })
 }
 
 exports.find_by_accident_type_post = (req, res) => {
+    let responseData = []
     accidentDetail.find({
         insuranceCompany: req.body.insuranceCompany,
         accidentType: req.body.accidentType
@@ -63,6 +74,9 @@ exports.find_by_accident_type_post = (req, res) => {
             if (err) {
                 res.status(500).send(err)
             }
-            res.status(200).send(data)
+            if (data) {
+                responseData.push(data)
+            }
+            res.status(200).send(responseData)
         })
 }
