@@ -227,6 +227,7 @@ const Form = ({ formType }) => {
                             onChange={inputName !== '' ? handleFileInput : null}
                         />
                         <div className="file-dummy">
+                            
                             {/* eslint-disable-next-line */}
                             <div className="success">{eval(inputName).fileName.substring(0, 35)}</div>
                             {/* eslint-disable-next-line */}
@@ -360,9 +361,7 @@ const Form = ({ formType }) => {
 
                             <hr></hr>
 
-                            {renderInput('file', '', 'Photo of collision', false)}
-                            {renderInput('file', '', 'Photo of detail', false)}
-
+                            
                             <button className='btn btn-secondary mb-4'>{translate('Submit data')}</button>
                         </form>
 

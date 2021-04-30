@@ -47,10 +47,11 @@ const InsuranceAdmin = (props) => {
                     firstReg: queryData.date
                 })
                     .then(res => {
-                        if (res.status === 200) {
-                            console.log(res.data)
+                        if(res.status === 200 && res.data.length === 0) {
+                            setClients([])
+                        }
+                        if (res.status === 200 && res.data.length !== 0) {
                             setClients(res.data)
-                            console.log(clients.length)
                         }
                     })
                 break;
@@ -60,6 +61,9 @@ const InsuranceAdmin = (props) => {
                     name: queryData.name
                 })
                     .then(res => {
+                        if(res.status === 200 && res.data.length === 0) {
+                            setClients([])
+                        }
                         if (res.status === 200 && res.data.length !== 0) {
                             setClients(res.data)
                         }
@@ -71,18 +75,24 @@ const InsuranceAdmin = (props) => {
                     idn: queryData.idn
                 })
                     .then(res => {
+                        if(res.status === 200 && res.data.length === 0) {
+                            setClients([])
+                        }
                         if (res.status === 200 && res.data.length !== 0) {
                             setClients(res.data)
                         }
                     })
                 break;
             case 'accident':
+                console.log(queryData.accidentType)
                 axios.post('http://localhost:3001/query/accidentType', {
                     insuranceCompany: insCompany,
                     accidentType: queryData.accidentType
                 })
                     .then(res => {
-                        console.log(res.data)
+                        if(res.status === 200 && res.data.length === 0) {
+                            setClients([])
+                        } 
                         if (res.status === 200 && res.data.length !== 0) {
                             setClients(res.data)
                         }
@@ -105,7 +115,7 @@ const InsuranceAdmin = (props) => {
             <section className='admin-section'>
                 <div className='admin-panel'>
                     <div className='input-labels'>
-                        <p>{translate('Find by date:')}</p>
+                        <p>{translate('Find by vehicle inspection expire date:')}</p>
                         <p>{translate('Find by client name:')}</p>
                         <p>{translate('Find by IDN:')}</p>
                         <p>{translate('Find by type of accident:')}</p>

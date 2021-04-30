@@ -41,7 +41,7 @@ const bg_dictionary = {
         'PASSWORD': 'Парола',
         'Insurance Admin': 'Админ застраховки',
         'LOGIN': 'Влез',
-        'Find by date:': 'Търси по дата:',
+        'Find by vehicle inspection expire date:': 'Търси по дата на изтичане на Г.Т.П.:',
         'Find by client name:': 'Търси по име на клиент:',
         'Find by IDN:': 'Търси по ЕГН:',
         'Find by type of accident:': 'Търси по вид на инцидент:',
