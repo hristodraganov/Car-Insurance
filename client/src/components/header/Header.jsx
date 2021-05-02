@@ -10,7 +10,7 @@ const Header = () => {
   //eslint-disable-next-line
   const [language, setLanguage] = useContext(LanguageContext);
   const [selectedLanguage, setSelectedLanguage] = useState(
-    "https://www.countryflags.io/us/flat/32.png"
+    "https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
   );
   //eslint-disable-next-line
   const handleCheck = () => {
@@ -30,6 +30,7 @@ const Header = () => {
       <div className="lang-options">
         <div className="selected-lang" onClick={() => setLangCheck(!langCheck)}>
           <img
+            style={{ width: "32px", height: "32px" }}
             className="selected-lang-icon"
             alt=""
             src={selectedLanguage}
@@ -38,30 +39,32 @@ const Header = () => {
         {langCheck ? (
           <ul>
             <li>
-              {/* eslint-disable-next-line */}
-              <a
-                className="en"
+              <img
+                style={{ width: "32px", height: "32px" }}
+                src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+                alt=""
                 onClick={() => {
                   setLanguage("en");
                   setLangCheck(!langCheck);
                   setSelectedLanguage(
-                    "https://www.countryflags.io/us/flat/32.png"
+                    "https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
                   );
                 }}
-              ></a>
+              ></img>
             </li>
             <li>
-              {/* eslint-disable-next-line */}
-              <a
-                className="bg"
+              <img
+                style={{ width: "32px", height: "32px" }}
+                src="https://purecatamphetamine.github.io/country-flag-icons/3x2/BG.svg"
+                alt=""
                 onClick={() => {
                   setLanguage("bg");
                   setLangCheck(!langCheck);
                   setSelectedLanguage(
-                    "https://www.countryflags.io/bg/flat/32.png"
+                    "https://purecatamphetamine.github.io/country-flag-icons/3x2/BG.svg"
                   );
                 }}
-              ></a>
+              ></img>
             </li>
           </ul>
         ) : null}
